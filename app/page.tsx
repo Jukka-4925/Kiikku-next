@@ -1,8 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { FaInstagram, FaFacebookF } from 'react-icons/fa';
+import { client } from '../sanity/lib/client';
 
 type Lang = 'en' | 'fi';
 
@@ -197,9 +198,35 @@ const eventSubject = {
 };
 
 export default function Home() {
-  const [lang, setLang] = useState<Lang>('fi');
-  const [menuOpen, setMenuOpen] = useState(false);
-  const t = content[lang];
+const [lang, setLang] = useState<Lang>('fi');
+const [menuOpen, setMenuOpen] = useState(false);
+const [blogPosts, setBlogPosts] = useState<
+  {
+    title: string;
+    excerpt?: string;
+    publishedAt: string;
+    language?: Lang;
+    slug?: { current: string };
+  }[]
+>([]);
+
+const t = content[lang];
+
+useEffect(() => {
+  client
+    .fetch(
+      `*[_type == "blogPost" && defined(slug.current)] | order(publishedAt desc)[0...3]{
+        title,
+        excerpt,
+        publishedAt,
+        language,
+        slug
+      }`,
+      { lang }
+    )
+    .then(setBlogPosts)
+    .catch(console.error);
+}, [lang]);
 
   return (
     <main>
@@ -279,15 +306,78 @@ export default function Home() {
               <a className="secondary" href="#menu">{t.hero.secondary}</a>
             </div>
           </div>
-          <aside className="float-card">
+          <aside className="desktop-blog-card">
             <div className="float-icon">✉</div>
             <h3 className="serif">{t.hero.eventTitle}</h3>
             <p>{t.hero.eventText}</p>
-            <a className="dark-button" href="mailto:kahvilakiikku@gmail.com">{t.hero.email}</a>
+            {blogPosts.length > 0 && (
+              <div className="blog-list">
+               {blogPosts.map((post) => (
+                 <article className="blog-item" key={`${post.publishedAt}-${post.title}`}>
+                    <time>
+                      {new Date(post.publishedAt).toLocaleDateString(
+                        lang === 'fi' ? 'fi-FI' : 'en-GB'
+                     )}
+                    </time>
+                     <h4>
+                       {post.slug?.current ? (
+                         <a href={`/blogi/${post.slug.current}`}>
+                           {post.title}
+                         </a>
+                       ) : (
+                         post.title
+                       )}
+                      </h4>
+                      {post.excerpt && <p>{post.excerpt}</p>}
+                  </article>
+                 ))}
+            </div>
+            )}
+
+            <a className="dark-button" href="mailto:kahvilakiikku@gmail.com">
+              {t.hero.email}
+            </a>
           </aside>
         </div>
       </section>
+      
+      <section className="mobile-blog-section">
+        <div className="container">
+          <div className="mobile-blog-card">
+           <div className="float-icon">✉</div>
+            <h3 className="serif">{t.hero.eventTitle}</h3>
+            <p>{t.hero.eventText}</p>
 
+            {blogPosts.length > 0 && (
+             <div className="blog-list">
+               {blogPosts.map((post) => (
+                  <article className="blog-item" key={`${post.publishedAt}-${post.title}`}>
+                    <time>
+                      {new Date(post.publishedAt).toLocaleDateString(
+                        lang === 'fi' ? 'fi-FI' : 'en-GB'
+                      )}
+                    </time>
+
+                    <h4>
+                      {post.slug?.current ? (
+                        <a href={`/blogi/${post.slug.current}`}>{post.title}</a>
+                      ) : (
+                        post.title
+                      )}
+                    </h4>
+
+                    {post.excerpt && <p>{post.excerpt}</p>}
+                  </article>
+                 ))}
+              </div>
+            )}
+
+            <a className="dark-button" href="mailto:kahvilakiikku@gmail.com">
+              {t.hero.email}
+            </a>
+          </div>
+        </div>
+      </section>
       <section className="split" id="kiikku">
         <div className="container split-grid">
           <div className="rounded-img">
