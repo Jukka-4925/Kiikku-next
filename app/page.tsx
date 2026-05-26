@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { FaInstagram, FaFacebookF } from 'react-icons/fa';
 
 type Lang = 'en' | 'fi';
 
@@ -222,6 +223,25 @@ export default function Home() {
             <div className="language-switch" aria-label="Language selection">
               <button type="button" className={lang === 'fi' ? 'active' : ''} onClick={() => setLang('fi')}>FIN</button>
               <button type="button" className={lang === 'en' ? 'active' : ''} onClick={() => setLang('en')}>ENG</button>
+            </div>
+            <div className="social-links">
+              <a
+                href="https://instagram.com/kahvila_kiikku"
+               target="_blank"
+              rel="noopener noreferrer"
+               aria-label="Instagram"
+              >
+                <FaInstagram />
+              </a>
+
+              <a
+                 href="https://facebook.com/KahvilaKiikku"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+              >
+                <FaFacebookF />
+              </a>
             </div>
           </div>
           <button

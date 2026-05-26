@@ -1026,3 +1026,39 @@ footer {
     font-size: 20px;
   }
 }
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.social-links a {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,.08);
+  color: white;
+  transition: all .25s ease;
+  font-size: 16px;
+}
+
+.social-links a:hover {
+  background: var(--kiikku-yellow);
+  color: #183B2A;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .social-links {
+    margin-left: auto;
+  }
+
+  .social-links a {
+    width: 34px;
+    height: 34px;
+    font-size: 15px;
+  }
+}
