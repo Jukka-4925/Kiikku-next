@@ -308,6 +308,7 @@ useEffect(() => {
           </div>
           <aside className="desktop-blog-card">
             <div className="float-icon">✉</div>
+            <p className="blog-label">KIIKUN BLOGI</p>
             <h3 className="serif">{t.hero.eventTitle}</h3>
             <p>{t.hero.eventText}</p>
             {blogPosts.length > 0 && (
@@ -471,7 +472,7 @@ useEffect(() => {
               }}
             >
               <Image
-                src="/images/hupikioski.jpg"
+                src="/images/hupikioski-2025.jpg"
                 alt={lang === 'fi' ? 'Hupikioski Hupisaarten kesäteatterin vieressä' : 'Hupikioski next to Hupisaaret Summer Theatre'}
                 width={1000}
                 height={700}
