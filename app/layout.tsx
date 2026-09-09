@@ -3,9 +3,9 @@ import './globals.css';
 import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
-  title: 'Kahvila Kiikku | Ainolanpuisto, Oulu',
+  title: 'Kahvila Kiikku | Hupisaarten kaupunginpuisto, Oulu',
   description:
-    'Kahvila Kiikku in Ainolanpuisto, Oulu. Coffee, pastries, grill favourites, wine, beer, cocktails, private events and Hupikioski theatre refreshments.',
+    'Kahvila Kiikku in Hupisaaret City Park, Oulu. Coffee, pastries, grill favourites, wine, beer, cocktails, private events and Hupikioski theatre refreshments.',
 };
 
 export default function RootLayout({

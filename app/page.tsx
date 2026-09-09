@@ -7,6 +7,9 @@ import { client } from '../sanity/lib/client';
 
 type Lang = 'en' | 'fi';
 
+const KIIKKU_ADDRESS = 'Hupisaarten Kaupunginpuisto, 90100 Oulu';
+const KIIKKU_MAPS_QUERY = 'Hupisaarten Kaupunginpuisto, 90100 Oulu';
+
 const content = {
   en: {
     topStrip: ['Opening hours: May 10–18 · June–August 9–21 · September 10–18 ·', 'Private events available outside regular café hours'],
@@ -19,10 +22,10 @@ const content = {
       contact: 'Contact',
     },
     hero: {
-      eyebrow: 'Ainolanpuisto · Oulu',
+      eyebrow: 'Hupisaaret City Park · Oulu',
       title: 'Kahvila Kiikku',
       subtitle: 'Atmospheric café inside a greenhouse',
-      text: 'Coffee, pastries, grill favourites, wine and relaxed summer moments in the greenery of Ainolanpuisto.',
+      text: 'Coffee, pastries, grill favourites, wine and relaxed summer moments in the greenery of Hupisaaret City Park.',
       primary: 'Welcome to Kiikku',
       secondary: 'Explore the menu',
       eventTitle: "What's happening at Kiikku",
@@ -33,7 +36,7 @@ const content = {
       label: 'Welcome to Kahvila Kiikku',
       title: 'A place to stay for a moment — or a little longer',
       paragraphs: [
-        "In the middle of Oulu's beautiful park scenery, surrounded by the greenery of Ainolanpuisto, Kahvila Kiikku is waiting — a place where you can pause for a short while or settle in for longer.",
+        "In the middle of Oulu's beautiful park scenery, surrounded by the greenery of Hupisaaret City Park, Kahvila Kiikku is waiting — a place where you can pause for a short while or settle in for longer.",
         'We serve a daily changing selection of sweet pastries, savoury bites, specialty coffees and refreshing drinks. Our selection brings together seasonal flavours, local treats and coffee moments that taste a little better than usual.',
         'The Hupisaaret playground next to Kiikku makes a visit enjoyable for the whole family — while the little ones play, adults can sit down for a coffee and enjoy the park atmosphere.',
         'Come for coffee, brunch or an ice cream stop. For us, what matters most is good taste, a relaxed atmosphere and enjoying time together.',
@@ -44,7 +47,7 @@ const content = {
       title: 'Small details that make the visit easy',
       text: 'Kiikku is made for relaxed park days, families, friends and summer evenings.',
       dogsTitle: 'Dogs welcome',
-      dogsText: 'Dogs are welcome at Kiikku, so you can stop by during a walk in Ainolanpuisto.',
+      dogsText: 'Dogs are welcome at Kiikku, so you can stop by during a walk in Hupisaaret City Park.',
       soupTitle: 'Soup on weekends',
       soupText: 'On weekends we serve soup alongside our café selection, depending on the season and availability.',
     },
@@ -84,9 +87,9 @@ const content = {
     },
     location: {
       title: 'Location',
-      text: 'Kahvila Kiikku is located in Ainolanpuisto, surrounded by greenery. Hupikioski serves next to Hupisaaret Summer Theatre as its own service point.',
+      text: 'Kahvila Kiikku is located in Hupisaaret City Park, surrounded by greenery. Hupikioski serves next to Hupisaaret Summer Theatre as its own service point.',
       kiikku: 'Kahvila Kiikku',
-      kiikkuAddress: 'Ainolanpolku 1, 90100 Oulu',
+      kiikkuAddress: KIIKKU_ADDRESS,
       hupi: 'Hupikioski',
       hupiAddress: 'Next to Hupisaaret Summer Theatre',
       maps: 'Google Maps',
@@ -94,7 +97,7 @@ const content = {
       hoursText: 'May 10–18 · June–August 9–21 · September 10–18 ·.',
     },
     footer: {
-      location: 'Kahvila Kiikku · Ainolanpuisto · Oulu',
+      location: 'Kahvila Kiikku · Hupisaaret City Park · Oulu',
       billing: 'Billing address: 003733517057 APIX',
       oiva: 'Oiva report',
     },
@@ -110,10 +113,10 @@ const content = {
       contact: 'Yhteystiedot',
     },
     hero: {
-      eyebrow: 'Ainolanpuisto · Oulu',
+      eyebrow: 'Hupisaarten kaupunginpuisto · Oulu',
       title: 'Kahvila Kiikku',
       subtitle: 'Tunnelmallinen kahvila kasvihuoneessa',
-      text: 'Kahvia, leivonnaisia, grilliherkkuja, viiniä ja kiireettömiä kesähetkiä Ainolanpuiston vehreydessä.',
+      text: 'Kahvia, leivonnaisia, grilliherkkuja, viiniä ja kiireettömiä kesähetkiä Hupisaarten kaupunginpuiston vehreydessä.',
       primary: 'Tervetuloa Kiikkuun',
       secondary: 'Tutustu menuun',
       eventTitle: 'Kiikussa tapahtuu',
@@ -124,7 +127,7 @@ const content = {
       label: 'Tervetuloa Kahvila Kiikkuun',
       title: 'Paikka, jossa voi viipyä hetken tai vähän pidempään',
       paragraphs: [
-        'Keskellä Oulun kauneinta puistomaisemaa, Ainolanpuiston vehreydessä, odottaa Kahvila Kiikku — paikka jossa voi viipyä hetken tai vähän pidempään.',
+        'Keskellä Oulun kauneinta puistomaisemaa, Hupisaarten kaupunginpuiston vehreydessä, odottaa Kahvila Kiikku — paikka jossa voi viipyä hetken tai vähän pidempään.',
         'Tarjoilemme päivittäin vaihtuvan valikoiman makeita leivonnaisia, suolaista purtavaa, erikoiskahveja ja virkistäviä juomia. Valikoimastamme löytyy sesongin makuja, paikallisia herkkuja ja kahvihetkiä, jotka maistuvat vähän tavallista paremmilta.',
         'Kiikun vieressä sijaitseva Hupisaarten leikkipuisto tekee vierailusta elämyksen koko perheelle — samalla kun pienimmät viihtyvät leikeissä, aikuiset voivat istahtaa hetkeksi nauttimaan kahvista ja puiston tunnelmasta.',
         'Tule kahville, brunssille tai piipahtamaan jäätelölle. Meille tärkeintä on hyvä maku, rento tunnelma ja yhdessä viihtyminen.',
@@ -135,7 +138,7 @@ const content = {
       title: 'Pieniä asioita, jotka tekevät vierailusta helpon',
       text: 'Kiikku sopii rentoihin puistopäiviin, perheille, ystäville ja kesäiltoihin.',
       dogsTitle: 'Koirat sallittu',
-      dogsText: 'Koirat ovat tervetulleita Kiikkuun, joten meille voi poiketa myös Ainolanpuiston kävelyn lomassa.',
+      dogsText: 'Koirat ovat tervetulleita Kiikkuun, joten meille voi poiketa myös Hupisaarten kaupunginpuiston kävelyn lomassa.',
       soupTitle: 'Viikonloppuisin keittoa',
       soupText: 'Viikonloppuisin tarjoilemme keittoa kahvilavalikoiman rinnalla sesongin ja saatavuuden mukaan.',
     },
@@ -175,9 +178,9 @@ const content = {
     },
     location: {
       title: 'Sijainti',
-      text: 'Kahvila Kiikku sijaitsee Ainolanpuistossa vehreän puistoympäristön keskellä. Hupikioski palvelee Hupisaarten kesäteatterin vieressä omana palvelupisteenään.',
+      text: 'Kahvila Kiikku sijaitsee Hupisaarten kaupunginpuistossa vehreän puistoympäristön keskellä. Hupikioski palvelee Hupisaarten kesäteatterin vieressä omana palvelupisteenään.',
       kiikku: 'Kahvila Kiikku',
-      kiikkuAddress: 'Ainolanpolku 1, 90100 Oulu',
+      kiikkuAddress: KIIKKU_ADDRESS,
       hupi: 'Hupikioski',
       hupiAddress: 'Hupisaarten kesäteatterin vieressä',
       maps: 'Google Maps',
@@ -185,7 +188,7 @@ const content = {
       hoursText: 'Toukokuu 10–18 · Kesä–elokuu 9–21 · Syyskuu 10–18 ·',
     },
     footer: {
-      location: 'Kahvila Kiikku · Ainolanpuisto · Oulu',
+      location: 'Kahvila Kiikku · Hupisaarten kaupunginpuisto · Oulu',
       billing: 'Laskutusosoite: 003733517057 APIX',
       oiva: 'Oiva-raportti',
     },
@@ -544,7 +547,7 @@ useEffect(() => {
         <div className="map-embed">
           <iframe
             title="Kahvila Kiikku Google Maps"
-            src="https://www.google.com/maps?q=Ainolanpolku%201,%2090100%20Oulu&output=embed"
+            src={`https://www.google.com/maps?q=${encodeURIComponent(KIIKKU_MAPS_QUERY)}&output=embed`}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />
