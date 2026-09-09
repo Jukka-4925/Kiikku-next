@@ -8,7 +8,7 @@ import { client } from '../sanity/lib/client';
 type Lang = 'en' | 'fi';
 
 const KIIKKU_ADDRESS = 'Hupisaarten Kaupunginpuisto, 90100 Oulu';
-const KIIKKU_MAPS_QUERY = 'Kahvila Kiikku, Hupisaarten Kaupunginpuisto, 90100 Oulu';
+const KIIKKU_MAPS_QUERY = 'Hupisaarten Kaupunginpuisto, 90100 Oulu';
 
 const content = {
   en: {
