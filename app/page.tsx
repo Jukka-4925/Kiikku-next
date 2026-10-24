@@ -9,10 +9,12 @@ type Lang = 'en' | 'fi';
 
 const KIIKKU_ADDRESS = 'Hupisaarten Kaupunginpuisto, 90100 Oulu';
 const KIIKKU_MAPS_QUERY = 'Hupisaarten Kaupunginpuisto, 90100 Oulu';
+const KIIKKU_HOURS_FI = 'Toukokuu 10–18 · Kesä–elokuu 9–21 · Syyskuu 10–18 · Loka–marraskuu la–su 10–16';
+const KIIKKU_HOURS_EN = 'May 10–18 · June–August 9–21 · September 10–18 · October–November Sat–Sun 10–16';
 
 const content = {
   en: {
-    topStrip: ['Opening hours: May 10–18 · June–August 9–21 · September 10–18 ·', 'Private events available outside regular café hours'],
+    topStrip: [`Opening hours: ${KIIKKU_HOURS_EN}`, 'Private events available outside regular café hours'],
     nav: {
       kiikku: 'Kiikku',
       menu: 'Menu',
@@ -94,7 +96,7 @@ const content = {
       hupiAddress: 'Next to Hupisaaret Summer Theatre',
       maps: 'Google Maps',
       hours: 'Opening hours',
-      hoursText: 'May 10–18 · June–August 9–21 · September 10–18 ·.',
+      hoursText: KIIKKU_HOURS_EN,
     },
     footer: {
       location: 'Kahvila Kiikku · Hupisaaret City Park · Oulu',
@@ -103,7 +105,7 @@ const content = {
     },
   },
   fi: {
-    topStrip: ['Aukioloajat: Toukokuu 10–18 · Kesä–elokuu 9–21 · Syyskuu 10–18 ·', 'Yksityistilaisuudet kahvilan aukioloaikojen ulkopuolella'],
+    topStrip: [`Aukioloajat: ${KIIKKU_HOURS_FI}`, 'Yksityistilaisuudet kahvilan aukioloaikojen ulkopuolella'],
     nav: {
       kiikku: 'Kiikku',
       menu: 'Menu',
@@ -185,7 +187,7 @@ const content = {
       hupiAddress: 'Hupisaarten kesäteatterin vieressä',
       maps: 'Google Maps',
       hours: 'Aukioloajat',
-      hoursText: 'Toukokuu 10–18 · Kesä–elokuu 9–21 · Syyskuu 10–18 ·',
+      hoursText: KIIKKU_HOURS_FI,
     },
     footer: {
       location: 'Kahvila Kiikku · Hupisaarten kaupunginpuisto · Oulu',
