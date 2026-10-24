@@ -9,8 +9,8 @@ type Lang = 'en' | 'fi';
 
 const KIIKKU_ADDRESS = 'Hupisaarten Kaupunginpuisto, 90100 Oulu';
 const KIIKKU_MAPS_QUERY = 'Hupisaarten Kaupunginpuisto, 90100 Oulu';
-const KIIKKU_HOURS_FI = 'Toukokuu 10–18 · Kesä–elokuu 9–21 · Syyskuu 10–18 · Loka–marraskuu la–su 10–16';
-const KIIKKU_HOURS_EN = 'May 10–18 · June–August 9–21 · September 10–18 · October–November Sat–Sun 10–16';
+const KIIKKU_HOURS_FI = 'Toukokuu 10–18 · Kesä–elokuu 9–21 · Syyskuu 10–18 · Loka- ja marraskuu lauantai ja sunnuntai 10–16';
+const KIIKKU_HOURS_EN = 'May 10–18 · June–August 9–21 · September 10–18 · October and November Saturday and Sunday 10–16';
 
 const content = {
   en: {
